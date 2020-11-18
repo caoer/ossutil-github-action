@@ -17,6 +17,9 @@ inputs:
   endpoint:
     description: 'Endpoint for aliyun oss'
     required: false
+  proxyHost:
+    desctiption: 'proxy host'
+    retured: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,3 +28,4 @@ runs:
     - ${{ inputs.accessKey }}
     - ${{ inputs.accessSecret }}
     - ${{ inputs.endpoint }}
+    - ${{ inputs.proxyHost }}
